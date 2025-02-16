@@ -1,0 +1,32 @@
+
+Explanation of the Code:
+
+1. Melt the DataFrame:
+----------------------
+all_matches = pd.melt(matches_df, id_vars=['season', 'winner'], value_vars=['team1', 'team2'], var_name='team_type', value_name='team')
+
+- What is happening here?
+  - Imagine you have a table with columns for the season, the two teams that played, and the winner.
+  - We want to create a new table where each row represents a team that played in a match, along with the season and the winner.
+  - The 'pd.melt' function helps us do this by "melting" the 'team1' and 'team2' columns into a single column called 'team'.
+
+2. Mark Losses:
+---------------
+all_matches['loss'] = all_matches.apply(lambda row: row['team'] != row['winner'], axis=1)
+
+- What is happening here?
+  - We want to know if a team lost a match.
+  - We create a new column called 'loss'.
+  - For each row (which represents a team in a match), we check if the team is not the winner.
+  - If the team is not the winner, we mark it as a loss ('True'). If the team is the winner, we mark it as not a loss ('False').
+
+3. Calculate Losses per Season:
+-------------------------------
+losses_per_season = all_matches[all_matches['loss']].groupby(['season', 'team']).size().reset_index(name='losses')
+
+- What is happening here?
+  - We want to count the number of losses for each team in each season.
+  - We filter the table to keep only the rows where the team lost ('all_matches[all_matches['loss']]').
+  - We group the data by season and team.
+  - We count the number of losses for each team in each season.
+  - We create a new table with columns for season, team, and the number of losses.
