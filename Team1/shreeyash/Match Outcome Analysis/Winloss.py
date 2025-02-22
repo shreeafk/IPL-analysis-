@@ -8,6 +8,10 @@ matches_df = pd.read_csv('C:/Users/SHEEYASH/Documents/GitHub/IPL-analysis-/Team1
 matches_df = matches_df[['season', 'team1', 'team2', 'winner']]
 
 # Handle missing values
+print("top header:",matches_df.head())
+matches_df.info()
+matches_df.describe()
+print("null values",matches_df.isnull().sum())
 matches_df = matches_df.dropna(subset=['winner'])
 
 wins_per_season = matches_df.groupby(['season', 'winner']).size().reset_index(name='wins')
@@ -43,4 +47,4 @@ plt.xticks(rotation=45)
 plt.tight_layout()
 plt.show()
 
-#ll_matches.to_csv('C:/Users/SHEEYASH/Documents/GitHub/IPL-analysis-/Team1/shreeyash/modified_matches.csv', index=False)
+all_matches.to_csv('C:/Users/SHEEYASH/Documents/GitHub/IPL-analysis-/Team1/shreeyash/modified_matches.csv', index=False)
