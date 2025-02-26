@@ -2,7 +2,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-matches_df = pd.read_csv('C:/Users/SHEEYASH/Documents/GitHub/IPL-analysis-/Team1/shreeyash/matches.csv')
+matches_df = pd.read_csv('C:/Users/SHEEYASH/Documents/GitHub/IPL-analysis-/IPL project/Team1/shreeyash/matches.csv')
+
 
 
 matches_df = matches_df[['season', 'team1', 'team2', 'winner']]
@@ -47,4 +48,4 @@ plt.xticks(rotation=45)
 plt.tight_layout()
 plt.show()
 
-all_matches.to_csv('C:/Users/SHEEYASH/Documents/GitHub/IPL-analysis-/Team1/shreeyash/modified_matches.csv', index=False)
+#all_matches.to_csv('C:/Users/SHEEYASH/Documents/GitHub/IPL-analysis-/Team1/shreeyash/modified_matches.csv', index=False)

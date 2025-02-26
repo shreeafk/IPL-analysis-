@@ -3,8 +3,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Load the data
-deliveries_df = pd.read_csv('C:/Users/SHEEYASH/Documents/GitHub/IPL-analysis-/Team1/shreeyash/deliveries.csv')
-matches_df = pd.read_csv('C:/Users/SHEEYASH/Documents/GitHub/IPL-analysis-/Team1/shreeyash/matches.csv')
+deliveries_df = pd.read_csv('C:/Users/SHEEYASH/Documents/GitHub/IPL-analysis-/IPL project/Team1/shreeyash/deliveries.csv')
+matches_df = pd.read_csv('C:/Users/SHEEYASH/Documents/GitHub/IPL-analysis-/IPL project/Team1/shreeyash/matches.csv')
 
 # Extract relevant columns from matches_df
 matches_df = matches_df[['id', 'season', 'team1', 'team2', 'winner']]
@@ -28,7 +28,7 @@ print('win/loss ',win_loss_ratio)
 win_loss_ratio['win_loss_ratio'] = win_loss_ratio['wins'] / win_loss_ratio['matches_played']
 print('win/loss after division',win_loss_ratio)
 print("Win/Loss Ratio DataFrame Columns:", win_loss_ratio.columns)
-win_loss_ratio.to_csv('C:/Users/SHEEYASH/Documents/GitHub/IPL-analysis-/Team1/shreeyash/win_loss_ratiobymatch.csv', index=False)
+#win_loss_ratio.to_csv('C:/Users/SHEEYASH/Documents/GitHub/IPL-analysis-/Team1/shreeyash/win_loss_ratiobymatch.csv', index=False)
 
 # Merge performance metrics into a single DataFrame
 team_performance = pd.merge(total_runs, wickets, left_on='batting_team', right_on='bowling_team')
