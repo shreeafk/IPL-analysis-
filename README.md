@@ -21,3 +21,10 @@ comprehensive overview of IPL data for in-depth analysis and decision-making
 ![Screenshot 2025-03-26 172555a](https://github.com/user-attachments/assets/38252617-f93b-4507-a9b4-9cfe2378a177)
 
 
+# Contributers 
+### [Shreeyash](https://www.linkedin.com/in/dataanalyst101/)
+### [Shaan](https://www.linkedin.com/in/mohammed-shaan-a-r-6b1208201)
+### [Shireen](https://www.linkedin.com/in/shireen-sadhik-287130271)
+### [Aheesh](http://linkedin.com/in/k-aheesh-madhyastha-9856592aa)
+
+
